@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f1ed94d7a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Ankita</span><br>Bhattacharjee<br>From Kolkata</h1>
+        </div>
+     </div>
+</div>
+
+<div id ="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Holding bachelor degree in Electronics and Communication Engineering. 
+                   Having knowledge on software testing & verious languages. Self-motivated 
+                   and hardworking engineer seeking for an opportunity to work in a challenging 
+                   environment to prove my skills and utilize my knowledge & intelligence in 
+                   the growth of the organization.</p>  
+
+                   <div class="tab-titles">
+                        <p class="tab_links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                   </div>
+                   <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                            <li><span>Selenium</span><br>Automation in software testing</li>
+                            <li><span>SQL</span><br>Development of Databases</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - 2025</span><br>QC&QA,Processing Engineer<br>at Dexgreen India pvt ltd</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2024</span><br>Btech on Electronics and Communication Engineering</li>
+                            <li><span>2018 - 2021</span><br>Diploma in Electronic and Telecommunication Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>   
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Software Testing</h2>
+                <p>Work on Selenium using Python.</p>
+                      
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>SQL</h2>
+                <p>Handeling Databases.</p>
+                      
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="potfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work2.jpg">
+                <div class="layer">
+                    <h3>Test Cases</h3>
+                    <p>Verious test cases code to verify 
+                       the work of that website with automation testing.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3>Databases</h3>
+                    <p>Make some databases and working on it.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.png">
+                <div class="layer">
+                    <h3>Web Page</h3>
+                    <p>Designing web page using html, css, javascript</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-center">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>abhattacharjee056@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+91 9270554075 | 8622941145</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ankita-bhattacharjee-593219262/"><i class="fa-brands fa-square-linkedin"></i></a>
+                    <a href="https://github.com/ANKITA-FIEM"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/the__black_rose_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ankita.bhattacharjee.567058"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+                <a href="images/My Resume (1).pdf" download class="btn btn2">Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab_links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
